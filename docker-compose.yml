@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  python:
+    build: 
+      context: .
+    command: python /app/main.py
+    deploy:
+      replicas: 6
+    volumes:
+      - .:/app
+    
